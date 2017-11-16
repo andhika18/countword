@@ -4,14 +4,13 @@
  * @file
  *          This file is part of the CountWord library.
  *
- * @author  Andhika Kurnia <sebastien@malot.fr>
+ * @author  Andhika Kurnia <kurniaandhika18@gmail.com>
  * @date    2017-11-16
  * @license LGPLv3
- * @url     <https://github.com/andhika18/CountWord>
+ * @url     <https://github.com/andhika18/countword>
  *
  */
 
-use ZipArchive;
 use pdfparser;
 class CountWord
 {
