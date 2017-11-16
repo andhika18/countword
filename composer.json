@@ -8,9 +8,6 @@
         "tecnickcom/tcpdf": "~6.0",
         "smalot/pdfparser": "*"
     },
-    "require-dev": {
-        "atoum/atoum": "^2.8 | ^3.0"
-    },
     "license": "LGPLv3",
     "authors": [
         {
