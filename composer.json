@@ -15,7 +15,7 @@
             "email": "kurniaandhika18@gmail.com"
         }
     ],
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "autoload": {
         "files": ["countword.php"]
     }
