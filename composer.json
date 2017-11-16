@@ -1,5 +1,5 @@
 {
-    "name": "andhika18/CountWord",
+    "name": "andhika18/countword",
     "description": "Count Word from doc, docx and pdf in php.",
     "keywords": ["PDF", "text", "counter", "doc", "docx", "words"],
     "type": "library",
