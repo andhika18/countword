@@ -1,6 +1,6 @@
 {
     "name": "andhika18/countword",
-    "description": "Count Word from doc, docx and pdf in php.",
+    "description": "Count Word from doc, docx and pdf in php",
     "type": "library",
     "require": {
         "php": ">=5.3.0",
