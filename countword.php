@@ -11,7 +11,6 @@
  *
  */
 
-use pdfparser;
 class CountWord
 {
 	function __construct()
