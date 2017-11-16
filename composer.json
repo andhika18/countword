@@ -1,0 +1,25 @@
+{
+    "name": "andhika18/CountWord",
+    "description": "Count Word from doc, docx and pdf in php.",
+    "keywords": ["PDF", "text", "counter", "doc", "docx", "words"],
+    "type": "library",
+    "license": "LGPLv3",
+    "authors": [
+        {
+            "name": "Andhika Kurnia",
+            "email": "kurniaandhika18@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0",
+        "ext-iconv": "*",
+        "tecnickcom/tcpdf": "~6.0",
+        "smalot/pdfparser": "*"
+    },
+    "require-dev": {
+        "atoum/atoum": "^2.8 | ^3.0"
+    },
+    "autoload": {
+        "classmap": ["CountWord.php"]
+    }
+}
