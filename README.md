@@ -1,5 +1,5 @@
 # CountWord
-Count Word from doc, docx and pdf in php
+Count Word from doc, docx, txt and pdf in php
 
 # Install with composer
   ```php
