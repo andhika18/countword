@@ -1,2 +1,2 @@
 # CountWord
-Count Word from doc, docx and pdf in php
+Count Word from doc, docx, txt, odt and pdf in php

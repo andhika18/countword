@@ -4,12 +4,13 @@
  * @file
  *          This file is part of the CountWord library.
  *
- * @author  Andhika Kurnia <kurniaandhika18@gmail.com>
- * @date    2017-11-16
+ * @author  Andhika Kurnia <kurniaandhika18@gmail>
+ * @date    2017-11-17
  * @license LGPLv3
- * @url     <https://github.com/andhika18/countword>
+ * @url     <https://github.com/andhika18/CountWord>
  *
  */
+
 
 class CountWord
 {
@@ -26,6 +27,12 @@ class CountWord
             return str_word_count($this->read_doc($filename)); 
         }else if($fileext=="pdf"){
             return str_word_count($this->read_pdf($filename)); 
+        }else if($fileext=="rtf"){
+            return str_word_count($this->read_rtf($filename)); 
+        }else if($fileext=="txt"){
+            return str_word_count($this->read_txt($filename)); 
+        }else if($fileext=="odt"){
+            return str_word_count($this->read_odt($filename)); 
         }
 	}
 	public function text($filename){
@@ -36,6 +43,12 @@ class CountWord
         	return print_r($this->read_doc($filename)); 
         }else if($fileext=="pdf"){
             return print_r($this->read_pdf($filename)); 
+        }else if($fileext=="rtf"){
+            return print_r($this->read_rtf($filename)); 
+        }else if($fileext=="txt"){
+            return print_r($this->read_txt($filename)); 
+        }else if($fileext=="odt"){
+            return str_word_count($this->read_odt($filename)); 
         }
 		
 	}
@@ -93,5 +106,37 @@ class CountWord
         $text = $pdf->getText();
         $text = str_replace($bullet, " ", $text);
         return $text;
+    }
+    private function read_txt($filename) {
+        $line = file_get_contents($filename);   
+        
+        return $line;
+    }
+    private function read_odt($filename){
+        $striped_content = '';
+        $content = '';
+
+        $zip = zip_open($filename);
+
+        if (!$zip || is_numeric($zip)) return false;
+
+        while ($zip_entry = zip_read($zip)) {
+
+            if (zip_entry_open($zip, $zip_entry) == FALSE) continue;
+
+            if (zip_entry_name($zip_entry) != "content.xml") continue;
+
+            $content .= zip_entry_read($zip_entry, zip_entry_filesize($zip_entry));
+
+            zip_entry_close($zip_entry);
+        }// end while
+
+        zip_close($zip);
+
+        $content = str_replace('</w:r></w:p></w:tc><w:tc>', " ", $content);
+        $content = str_replace('</w:r></w:p>', "\r\n", $content);
+        $striped_content = strip_tags($content);
+
+        return $striped_content;
     }
 }
