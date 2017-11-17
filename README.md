@@ -1,8 +1,11 @@
 # CountWord
 <<<<<<< HEAD
-Count Word from doc, docx, txt, odt and pdf in php
+Count Word from doc, docx, txt, odt and pdf in Laravel
 =======
-Count Word from doc, docx, txt and pdf in php
+Count Word from doc, docx, txt and pdf in Laravel
+
+# Require
+  Laravel >=5
 
 # Install with composer
   ```php
