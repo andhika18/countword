@@ -94,4 +94,9 @@ class CountWord
         $text = str_replace($bullet, " ", $text);
         return $text;
     }
+    private function read_txt($filename) {
+        $text = file_get_contents($filename);   
+        
+        return $text;
+    }
 }
