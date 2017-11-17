@@ -4,7 +4,11 @@
  * @file
  *          This file is part of the CountWord library.
  *
+<<<<<<< HEAD
  * @author  Andhika Kurnia <kurniaandhika18@gmail>
+=======
+ * @author  Andhika Kurnia <kurniaandhika18@gmail.com>
+>>>>>>> 6d5e1f042df0e4115ca2967c4e867eea70d58d34
  * @date    2017-11-17
  * @license LGPLv3
  * @url     <https://github.com/andhika18/CountWord>
